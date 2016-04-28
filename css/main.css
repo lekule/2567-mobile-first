@@ -5,78 +5,138 @@
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 1.0 - Typography
-1.1 - Headings
-1.2 - Body Copy
-1.3 - Buttons
-1.4 - Forms
-1.5 - Lists
-1.6 - Tables
+1.1 - Buttons
+1.3 - Lists
 
 2.0 - Navigation Menus
 2.1 - Main Menu
-2.2 - Sub Menu
-2.3 - Footer Menu
 
 3.0 - Content
 3.1 - Site Structure (Site Header, Advertisement, Site Footer)
-3.2 - Section Name
-3.3 - Section Name
 
 4.0 - Media
 
 5.0 - Utility
-5.1 - Background Colors
-5.2 - Text Colors
-5.3 - Text Sizes
-5.4 - Alignments
 --------------------------------------------------------------*/
 
 
 /*--------------------------------------------------------------
 1.0 - TYPOGRAPHY
 -------------------------------------------------------------- */
-body { 
+html {
+	font-size: 24px;
+}
+body {
 	font-family: 'Open Sans', sans-serif;
 }
-
-h1, h2, h3, a { 
+h1, h2, h3, a {
 	text-transform: uppercase;
 }
-
-h1, h2, h3, #hero p { 
+h2, h3, #hero {
 	text-align: center;
 }
-.col-3-5 p, col-1-4 p { 
-	font-size: 15px;
+.col-3-5 p, col-1-4 p, #bg-color-team p, address {
+	font-size: 0.6rem;
 }
-#hero p { 
+h1 {
+	font-size: 2.917rem;
+}
+#hero p {
 	font-family: 'Playfair Display', serif;
-	font-size: 25px;
+	font-size: 0.9rem;
+	margin-top: -35px;
+}
+#bg-color-nav a, h1, #hero p, a, #bg-color-team {
+	color: whitesmoke;
+}
+h2 {
+	font-size: 1.5rem;
+	margin-top: 65px;
+	margin-bottom: -13px;
+}
+h3 {
+	font-size: 0.8rem;
+}
+.col-3-5 p {
+	text-transform: none;
+	font-size: 0.7rem;
+}
+.col-1-4 {
+	text-align: center;
+	padding-right: 20px;
+}
+#bg-color-team p {
+	text-align: center;
+	padding-bottom: 20px;
+}
+#bg-color-team h2 {
+	padding-top: 65px;
+	margin-top: 65px;
+	margin-bottom: 31px;
+}
+footer a {
+	color: darkcyan;
+}
+address {
+	margin-top: 35px;
+	font-style: normal;
+}
+#bg-color-nav a:hover {
+	color: darkcyan;
 }
 
 /*--------------------------------------------------------------
-1.5 - LISTS
+1.1 - BUTTON
 -------------------------------------------------------------- */
-li { 
-	list-style-type: none;
-	display: inline-block;
+
+.btn {
+	border: 0.5px solid darkcyan;
+	border-radius: 25px;
+	background-color: #4b9b8e;
+}
+#hero a:first-child, btn {
+	padding-left: 425px;
+}
+.btn:hover {
+	background-color: rgba(248,245,245,0.7);
+	color: darkcyan;
+	border: 0.5px solid whitesmoke;
 }
 
+
+/*--------------------------------------------------------------
+1.3 - LISTS
+-------------------------------------------------------------- */
+li {
+	list-style-type: none;
+	display: inline-block;
+	padding-right: 20px;
+}
+ul {
+	text-align: right;
+}
 /*--------------------------------------------------------------
 2.0 - NAVIGATION MENUS
 -------------------------------------------------------------- */
-a { 
-text-decoration: none;
+a {
+	text-decoration: none;
 }
-
-
-
-
-
+.studioname {
+	font-family: 'Pacifico', cursive;
+}
+#hero a {
+	padding: 10px 40px 10px 31px;
+}
+a {
+	font-size: 0.6rem;
+}
 /*--------------------------------------------------------------
-3.1 - SITE STRUCTURE
+3.0 - SITE STRUCTURE
 -------------------------------------------------------------- */
-
+.col-3-5:first-child, .col-3-5:nth-child(2) { 
+    margin-bottom: 90px;
+    margin-top: 65px;
+}
 
 *, *:after, *:before {
 	-webkit-box-sizing: border-box;
@@ -134,11 +194,9 @@ img {
 .col-3-5 {
 	width: 50%;
 }
-.col-1-6 { 
-width: 16.6%;
-
+.col-1-6 {
+	width: 16.6%;
 }
-
 .col-4-6 {
 	width: 65%;
 }
@@ -193,7 +251,6 @@ width: 16.6%;
 .col-3-11 {
 	width: 20.5%;
 }
-
 .col-1-12 {
 	width: 8.33%;
 }
@@ -206,48 +263,110 @@ width: 16.6%;
 .col-2-12 {
 	width: 35%;
 }
+#bg-color-nav {
+	background-color: darkcyan;
+}
+.col-1-3 {
+	padding-top: 20px;
+}
+#bg-color-team {
+	background-color: darkcyan;
+	padding-bottom: 90px;
+}
+.circle {
+	-webkit-border-radius: 89.5px;
+	-moz-border-radius: 181px;
+	-ms-border-radious: 191px;
+	border-radius: 89.5px;
+	width: 179px;
+	height: 179px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+/*--------------------------------------------------------------
+4.0 MEDIA
+-------------------------------------------------------------- */
+#hero {
+	background: url(../img/hero.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding-top: 100px;
+	padding-bottom: 200px;
+}
+.hoverParent {
+	position: relative;
+	width: 100%;
+	height: 317px;
+}
 
+.hoverContent {
+	display: none;
+	padding: 60px;
 
+}
+.hoverParent:hover .hoverContent {
+	background-color: rgba(21,92,87,0.3);
+	text-align: center;
+	color: white;
+	display: block;
+	width: 100%;
+	height: 119%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding-top: 100px;
+}
+#print {
+	background-image: url(../img/print.jpg);
+}
+#appdesign {
+	background-image: url(../img/app-design.jpg);
+}
+#print, #appdesign, #interactive, #branding {
+	background-size: contain;
+	padding-bottom: 377px;
+}
+#interactive {
+	background-image: url(../img/interactive.jpg);
+}
+#branding {
+	background-image: url(../img/branding.jpg);
+}
+
+.facebook {
+	background-image: url(../img/lekule_facebook.png);
+	background-repeat: no-repeat;
+	height: 19px;
+	width: 9px;
+	background-position: 0 0;
+}
+.twitter {
+	background-image: url(../img/lekule_twitter.png);
+	background-repeat: no-repeat;
+	height: 19px;
+	width: 11px;
+	background-position: 0 0;
+}
+
+.twitter, .facebook { 
+	display: inline-block;
+}
+
+.twitter:hover, .facebook:hover { 
+	background-position: 0 -19px;
+
+}
+#sprites li { 
+	display: inline-block;
+}
+.col-1-4 ul { 
+text-align: center;
+}
 /*--------------------------------------------------------------
 5.1 - UTILITY
 -------------------------------------------------------------- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -261,51 +380,35 @@ width: 16.6%;
 
 @media screen and (max-width: 480px) {
 .col-1-4 {
-	width: 50%;
+	width: 100%;
 }
-.col-1-4:nth-child(2) { 
-
-padding-right: 0;
-
-}
-.col-3-4 { 
-	width: 50%;
-
-
-}
-
 
 .col-1-5 {
 	width: 100%;
 	padding-right: 0;
 }
-
 .col-2-5 {
 	width: 30%;
 }
 .col-3-5 {
-	width: 70%;
+	width: 100%;
 }
 .col-1-6 {
 	width: 33.33%;
 }
-
 .col-1-7 {
 	width: 100%;
 }
-
-
 .col-1-8 {
 	width: 25%;
 }
-.col-1-8:nth-child(4), .col-1-7, .col-1-5, .col-1-6:nth-child(3), .col-1-10, .col-1-9:nth-child(3), .col-1-9:nth-child(6)  { 
-
-padding-right: 0;
+.col-1-8:nth-child(4), .col-1-7, .col-1-5, .col-1-6:nth-child(3), .col-1-10, .col-1-9:nth-child(3), .col-1-9:nth-child(6) {
+	padding-right: 0;
 }
 .col-1-9 {
 	width: 33.3%;
 }
-.col-1-10 {
+.col-1-10{
 	width: 50%;
 }
 .col-1-11 {
@@ -314,4 +417,36 @@ padding-right: 0;
 .col-1-12 {
 	width: 33.33%;
 }
+#hero p {
+	font-size: 0.4rem;
+	padding-top: 10px;
+}
+h1 {
+	font-size: 2rem;
+	line-height: 50px;
+}
+.col-1-3 { 
+width: 33.33%;
+}
+.col-2-3 {
+	width: 66.66%;
+}
+a {
+	font-size: 0.4rem;
+}
+#bg-color-team p {
+	font-size: 0.6rem;
+
+}
+.hoverContent { 
+display: inline-block;
+width: 50%;
+padding: 30px;
+}
+#branding, #appdesign, #print, #interactive { 
+width: 50%;
+
+}
+
+
 }
